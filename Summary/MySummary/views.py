@@ -12,5 +12,11 @@ def second_experience(request):
 def third_experience(request):
     return render(request, 'third_exp.html')
 
+def education(request):
+    return render(request, 'education.html')
+
+def skills(request):
+    return render(request, 'skills.html')
+
 # Create your views here.
 
