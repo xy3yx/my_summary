@@ -25,12 +25,14 @@ SECRET_KEY = '1#x5fdl+^ic)$v0@(4=sha9)l=h*8g8&2=_@y9245qq5vyi&(('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'MySummary',
+    'Summary',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -54,7 +56,7 @@ ROOT_URLCONF = 'Summary.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/home/ivan/website/Summary/MySummary/templates/'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -117,11 +119,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/home/ivan/website/Summary/MySummary/static/'
+STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
-    '/home/ivan/website/Summary/MySummary/static/',
+    '/static/',
 )
-
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_cdn")
